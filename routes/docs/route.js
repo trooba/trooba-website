@@ -29,7 +29,7 @@ docFileNames.forEach((docFileName) => {
 booksFileNames.forEach((chapterFileName) => {
     const filePath = path.join(bookDir, chapterFileName + '.md');
     const markdown = fs.readFileSync(filePath, 'utf-8');
-    const repoFilePath = `https://github.com/trooba-book/book/blob.master/${chapterFileName}.md`;
+    const repoFilePath = `https://github.com/trooba/trooba-book/blob/master/book/${chapterFileName}.md`;
 
     docNameToMarkdownDocument[chapterFileName] = new MarkdownDocument({
         filePath,
