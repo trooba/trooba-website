@@ -1,14 +1,51 @@
 class {
     onCreate() {
-        this.state = { count:0 };
+        this.state = { reels: ['🍊', '🍉', '🍈'].join(' ') };
     }
-    increment() {
-        this.state.count++;
+
+    spin() {
+        var trooba = require('trooba');
+
+        // create a pipeline
+        var sharablePipe = trooba
+          .use(spinReel) // reel 1
+          .use(spinReel) // reel 2
+          .use(spinReel) // reel 3
+          .use(validate)
+          .build();
+
+        function spinReel(pipe) {
+          var symbols = ['🍊', '🍉', '🍈', '🍇', '🍆', '🍅', '🍄'];
+
+          pipe.once('request', function (request, next) {
+            var position = Math.round(Math.random() * (symbols.length - 1));
+            request.push(symbols[position]);
+            next();
+          });
+        }
+
+        function validate(pipe) {
+          pipe.once('request', function (request, next) {
+            var line = request.join(' ');
+            if (line === [request[0], request[0], request[0]].join(' ')) {
+              // you won!
+              return pipe.respond('You won! ' + line);
+            }
+            pipe.respond('You lost! ' + line);
+          });
+        }
+        // create a generic client and inject context
+        var client = sharablePipe.create();
+
+        // make a request
+        client.request([], (err, result) => {
+            this.state.reels = result;
+        });
     }
 }
 
 style {
-    .count {
+    .reals {
         color:#09c;
         font-size:3em;
     }
@@ -18,9 +55,9 @@ style {
     }
 }
 
-<div.count>
-    ${state.count}
+<div.reals>
+    ${state.reals}
 </div>
-<button.example-button on-click('increment')>
+<button.example-button on-click('spin')>
     Click me!
 </button>
