@@ -6,10 +6,12 @@ module.exports = function getContributorsForFile(file) {
     var contributors = {};
 
     let { repo, repoFilePath } = getRepoAndPath(file);
-
     return gh(`repos/${repo}/commits?path=${repoFilePath}`).then(res => {
         res.body.forEach(contribution => {
             var author = contribution.author;
+            if (!author) {
+                return;
+            }
             contributors[author.login] = {
                 username: author.login,
                 photo: author.avatar_url,

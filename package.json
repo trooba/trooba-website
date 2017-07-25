@@ -1,5 +1,5 @@
 {
-  "name": "markojs-website",
+  "name": "trooba-website",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -61,6 +61,6 @@
     "build-prod": "LASSO_TIMEOUT=200000 NODE_ENV=production npm run build",
     "publish": "LASSO_TIMEOUT=200000 NODE_ENV=production node ./publish.js"
   },
-  "static-repo": "git@github.com:mlrawlings/markojs-website.git#gh-pages",
-  "baseurl": "/markojs-website"
+  "static-repo": "git@github.com:dimichgh/trooba-website.git#gh-pages",
+  "baseurl": "/trooba-website"
 }

@@ -1,12 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 const prompt = require('prompt');
-const exec = require('child_process').execSync;
-const gitUrl = 'git@github.com:trooba/trooba.github.io.git';
+let exec = require('child_process').execSync;
+const gitUrl = 'https://github.com/trooba/trooba.github.io.git';
 const gitBranch = 'master';
 const buildDir = __dirname + '/dist';
 const publishDir = buildDir + '/__publish';
 // const domain = 'trooba.com';
+
+exec = (function (original) {
+    return function _exec() {
+        console.log(`executing `, [].slice.call(arguments).join(' '));
+        original.apply(null, arguments);
+    };
+})(exec);
 
 exec('markoc . --clean');
 exec('rm -rf .cache');
@@ -51,7 +58,7 @@ prompt.get(promptSchema, (err, res) => {
           exec(`rm -rf ${publishDir}`);
 
           // create CNAME file
-          fs.writeFileSync(path.join(buildDir, 'CNAME'), domain, 'utf-8');
+        //   fs.writeFileSync(path.join(buildDir, 'CNAME'), domain, 'utf-8');
 
           // commit and push up the changes
           try {
