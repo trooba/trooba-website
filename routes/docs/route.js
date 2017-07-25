@@ -15,8 +15,6 @@ const booksFileNames = fs.readdirSync(bookDir).filter(doc => /\.md$/.test(doc)).
 const documents = require('../../services/external-markdown').getDocuments();
 let docNameToMarkdownDocument = Object.assign({}, documents);
 
-console.log('#### DOCS:', docNameToMarkdownDocument)
-
 docFileNames.forEach((docFileName) => {
     const filePath = path.join(docsDir, docFileName + '.md');
     const markdown = fs.readFileSync(filePath, 'utf-8');
@@ -31,18 +29,18 @@ docFileNames.forEach((docFileName) => {
 booksFileNames.forEach((chapterFileName) => {
     const filePath = path.join(bookDir, chapterFileName + '.md');
     const markdown = fs.readFileSync(filePath, 'utf-8');
+    const repoFilePath = `https://github.com/trooba-book/book/blob.master/${chapterFileName}.md`;
 
     docNameToMarkdownDocument[chapterFileName] = new MarkdownDocument({
         filePath,
         markdown,
+        repoFilePath,
         documentName: path.basename(filePath)
     });
 });
 
 docNameToMarkdownDocument = Object.assign(docNameToMarkdownDocument,
     generateOverviewDocs());
-
-    console.log('==============docs:', docNameToMarkdownDocument);
 
 exports.path = '/docs/:name/';
 exports.params = Object.keys(docNameToMarkdownDocument).map(docName => ({ name: docName }));
@@ -52,7 +50,6 @@ exports.handler = (input, out) => {
 
     const markdownDocument = docNameToMarkdownDocument[name];
 
-console.log('----------->', name, docNameToMarkdownDocument)
     let doc = markdownToTemplate(markdownDocument);
     let toc = doc.toc;
     let contributors = getContributors(name);

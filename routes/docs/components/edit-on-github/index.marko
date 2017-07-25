@@ -1,6 +1,6 @@
 import { getCompleteFileUrl } from '~/services/external-markdown';
 
-$ var editPath = getCompleteFileUrl(input.name);
+$ var editPath = input.repoFilePath || getCompleteFileUrl(input.name);
 
 <a.edit-on-github href="${editPath}">
     EDIT <img src="./github.svg"/>

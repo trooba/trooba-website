@@ -74,7 +74,8 @@ exports.toTemplate = function renderMarkdown(markdownDocument) {
     let {
         markdown,
         documentName,
-        filePath
+        filePath,
+        repoFilePath
     } = markdownDocument;
 
     markdown = markdown
@@ -167,6 +168,7 @@ exports.toTemplate = function renderMarkdown(markdownDocument) {
 
     template.toc = toc.toHTML();
     template.title = title;
+    template.repoFilePath = repoFilePath;
 
     return template;
 };
