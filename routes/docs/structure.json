@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Introduction",
+        "docs": [
+            "Installing",
+            "Getting Started",
+            "API",
+            "Handlers",
+            "Transports",
+            "Custom API",
+            "Streaming",
+            "Tracing",
+            "Enforcing Delivery"
+        ]
+    },
+    {
+        "title": "Trooba Book",
+        "docs": [
+            "Scalable Pipelines",
+            "Ideal Framework",
+            "Separation Of Concerns",
+            "Using Trooba",
+            "Pipelines Everywhere!",
+            "Pipeline Lifecycle"
+        ]
+    }
+]

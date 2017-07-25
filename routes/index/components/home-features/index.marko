@@ -1,0 +1,61 @@
+<header.home-features>
+    <div.feature>
+        <h2.blue>generic.</h2>
+        <p>Protocol and transport agnostic, defines only basic concepts</p>
+    </div>
+    <div.feature>
+        <h2.red>extensible.</h2>
+        <p>Define new events and data types and implement your own architecture</p>
+    </div>
+    <div.feature>
+        <h2.yellow>isomorphic.</h2>
+        <p>Run it in browser or server side</p>
+    </div>
+</header>
+
+style {
+    .home-features {
+        flex-direction:row;
+        justify-content:space-between;
+        padding:2em;
+        flex-wrap:wrap;
+        max-width:80em;
+    }
+
+    .home-features .feature {
+        width:23%;
+    }
+
+    @media (max-width:50em) {
+        .home-features .feature {
+            width:47%;
+            margin-bottom:1em;
+        }
+    }
+
+    .home-features h2 {
+        padding:0;
+        border:0;
+    }
+
+    .home-features p {
+        padding:0;
+        margin:0;
+    }
+
+    .blue {
+        color:#09d;
+    }
+
+    .green {
+        color:#7d0;
+    }
+
+    .yellow {
+        color:#ffc400;
+    }
+
+    .red {
+        color:#d04;
+    }
+}
