@@ -29,9 +29,9 @@ class {
             var line = request.join(' ');
             if (line === [request[0], request[0], request[0]].join(' ')) {
               // you won!
-              return pipe.respond('You won! ' + line);
+              return pipe.respond(line + ' Yay!');
             }
-            pipe.respond('You lost! ' + line);
+            pipe.respond(line);
           });
         }
         // create a generic client and inject context
@@ -45,7 +45,7 @@ class {
 }
 
 style {
-    .reals {
+    .reels {
         color:#09c;
         font-size:3em;
     }
@@ -55,8 +55,8 @@ style {
     }
 }
 
-<div.reals>
-    ${state.reals}
+<div.reels>
+    ${state.reels}
 </div>
 <button.example-button on-click('spin')>
     Spin
