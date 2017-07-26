@@ -10,6 +10,18 @@
     </div>
 </header>
 
+<header.home-components.solid-color.odd style={ background:input.background }>
+    <heading.title tag="h1" text="Building a service pipe"/>
+
+    <p.description>Let's make a service call to https://api.github.com/repos/trooba/trooba</p>
+    <div.code-example-container>
+        <code-block('../xhr-example') no-switch/>
+        <div.running-example>
+            <include('../xhr-example')/>
+        </div>
+    </div>
+</header>
+
 style {
     .home-components {
         background-color:#09d;
@@ -18,6 +30,10 @@ style {
         justify-content:center;
         align-items:center;
         box-shadow:0 -0.25em 1.5em rgba(0,5,10,0.25);
+    }
+
+    .odd {
+        background-color:#ffc400;
     }
 
     .home-components h1.title {

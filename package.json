@@ -49,8 +49,9 @@
     "reveal.js": "^3.4.1",
     "strip-json-comments": "^2.0.1",
     "task-list": "^1.0.6",
-    "trooba-book": "github:trooba/trooba-book",
     "trooba": "github:trooba/trooba",
+    "trooba-book": "github:trooba/trooba-book",
+    "trooba-xhr-transport": "^2.0.1",
     "ui-components-playground": "github:marko-js-samples/ui-components-playground",
     "whatwg-fetch": "^2.0.2"
   },

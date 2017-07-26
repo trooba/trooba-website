@@ -1689,7 +1689,7 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@2.2.0, debug@~2.2.0:
+debug@2.2.0, debug@^2.1.1, debug@^2.2.0, debug@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
@@ -1701,7 +1701,7 @@ debug@2.3.3:
   dependencies:
     ms "0.7.2"
 
-debug@2.6.8, debug@^2.1.1, debug@^2.2.0:
+debug@2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
@@ -2857,6 +2857,10 @@ jsonparse@0.0.5:
 jsonparse@^1.2.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
+
+jsonpipe@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/jsonpipe/-/jsonpipe-2.1.1.tgz#c1ef5a5590faba7c14a57c6682807c14408698ee"
 
 jsprim@^1.2.2:
   version "1.4.0"
@@ -4708,13 +4712,13 @@ stack-trace@0.0.x:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
 
-statuses@1, "statuses@>= 1.3.1 < 2", statuses@~1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
-
-statuses@~1.2.1:
+statuses@1, statuses@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.2.1.tgz#dded45cc18256d51ed40aec142489d5c61026d28"
+
+"statuses@>= 1.3.1 < 2", statuses@~1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
 
 stream-browserify@^1.0.0:
   version "1.0.0"
@@ -4895,6 +4899,19 @@ trim-right@^1.0.1:
   version "1.0.0"
   resolved "https://codeload.github.com/trooba/trooba-book/tar.gz/85014a80d657ed89f69203b0fd368954d4136c5a"
 
+trooba-http-api@^2:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/trooba-http-api/-/trooba-http-api-2.0.1.tgz#33f059384c14ec8767568c425cb11ed75a851f32"
+  dependencies:
+    underscore "^1.8.3"
+
+trooba-xhr-transport@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/trooba-xhr-transport/-/trooba-xhr-transport-2.0.1.tgz#bb20fdcc8035a13b6708dca84a8a919d9d710eb1"
+  dependencies:
+    jsonpipe "^2.1.1"
+    trooba-http-api "^2"
+
 "trooba@github:trooba/trooba":
   version "2.0.2"
   resolved "https://codeload.github.com/trooba/trooba/tar.gz/64118426e22f74c0266bb9d8b3986f4104d69145"
@@ -5007,6 +5024,10 @@ underscore-plus@1.x, underscore-plus@^1, underscore-plus@^1.5.1, underscore-plus
 underscore.string@~2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/underscore.string/-/underscore.string-2.4.0.tgz#8cdd8fbac4e2d2ea1e7e2e8097c42f442280f85b"
+
+underscore@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
 underscore@~1.6.0:
   version "1.6.0"

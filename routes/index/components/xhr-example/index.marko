@@ -1,0 +1,79 @@
+class {
+    onCreate() {
+        this.state = {};
+        this.state.token = '';
+        this.state.jsonData = '';
+        this.state.error = ''
+    }
+
+    makeCall() {
+        this.state.error = '';
+        this.state.jsonData = '';
+
+        var trooba = require('trooba');
+        var transport = require('trooba-xhr-transport');
+
+        // create a pipeline
+        var sharablePipe = trooba
+          .use((pipe) => {
+              pipe.once('request', (request, next) => {
+                  request.headers.authorization =
+                    'token ' + this.state.token;
+                  next();
+              });
+          })
+          .use(transport, {
+              protocol: 'https://',
+              hostname: 'api.github.com',
+              path: '/repos/trooba/trooba',
+              socketTimeout: 5000,
+              withCredentials: false
+          })
+          .build();
+
+        // create a client with superagent api
+        var client = sharablePipe.create('client:default');
+
+        // make a request
+        client.get().end((err, result) => {
+            if (err) {
+                this.state.error = JSON.stringify(err);
+                return;
+            }
+            this.state.jsonData = JSON.stringify(result, null, 2);
+        });
+    }
+
+    updateToken(e) {
+        this.state.token = e.target.value;
+    }
+}
+
+style {
+    .jsonData {
+        color:#09c;
+        font-size:0.5em;
+    }
+    .error {
+        color:#f00;
+        font-size:1em;
+    }
+    .example-button {
+        font-size:1em;
+        padding:0.5em;
+    }
+}
+
+<b>Github Token</b>:
+<input type="text" value="${state.token}" on-change('updateToken')><br>
+<button.example-button on-click('makeCall')>
+    Make a Call
+</button>
+<br/>
+<b>Response</b>
+<textarea.jsonData rows="100" cols="80">
+    ${state.jsonData}
+</textarea>
+<div.error>
+    ${state.error}
+</div>
