@@ -1,5 +1,7 @@
 # Source code for trooba.com
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dimichgh/trooba-website.svg)](https://greenkeeper.io/)
+
 This repo contains the source code for trooba.com.
 
 ## Running trooba.com Locally
