@@ -1,0 +1,141 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - lasso-babel-transform > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso-babili > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > browser-refresh > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > browser-refresh > express > connect > serve-static > send > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > browser-refresh > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > browser-refresh > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > browser-refresh > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > browser-refresh > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > browser-refresh > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > browser-refresh > express > connect > serve-static > send > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > browser-refresh > express > connect > serve-static > send > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > browser-refresh > express > connect > serve-static > send > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > browser-refresh > express > connect > serve-static > send > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > browser-refresh > express > connect > serve-static > send > debug:
+        patched: '2023-05-25T08:40:39.280Z'
+  SNYK-JS-LODASH-567746:
+    - lasso-babel-transform > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso-babili > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso-babel-transform > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso-babili > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso-babel-transform > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso-babili > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > lasso > lasso-require > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > lasso > lasso-require > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T08:40:39.280Z'
+  'npm:mime:20170907':
+    - marko-starter > browser-refresh > express > connect > serve-static > send > mime:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > browser-refresh > express > connect > serve-static > send > mime:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > browser-refresh > express > connect > serve-static > send > mime:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > browser-refresh > express > connect > serve-static > send > mime:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > browser-refresh > express > connect > serve-static > send > mime:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > browser-refresh > express > connect > serve-static > send > mime:
+        patched: '2023-05-25T08:40:39.280Z'
+  'npm:ms:20170412':
+    - marko-starter > browser-refresh > express > connect > body-parser > debug > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-starter > browser-refresh > express > connect > serve-static > send > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > browser-refresh > express > connect > body-parser > debug > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > browser-refresh > express > connect > body-parser > debug > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > browser-refresh > express > connect > body-parser > debug > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > browser-refresh > express > connect > body-parser > debug > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > browser-refresh > express > connect > body-parser > debug > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-color-picker > marko-starter > browser-refresh > express > connect > serve-static > send > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-language-guide > marko-starter > browser-refresh > express > connect > serve-static > send > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-tic-tac-toe > marko-starter > browser-refresh > express > connect > serve-static > send > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - marko-todomvc > marko-starter > browser-refresh > express > connect > serve-static > send > ms:
+        patched: '2023-05-25T08:40:39.280Z'
+    - ui-components-playground > marko-starter > browser-refresh > express > connect > serve-static > send > ms:
+        patched: '2023-05-25T08:40:39.280Z'
